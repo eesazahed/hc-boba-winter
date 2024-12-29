@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+body {
+  background: linear-gradient(#2900a4, #29678d);
+  font-family: "Inter", sans-serif;
+  color: white;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+#title {
+  font-size: 5rem;
+  margin: 8rem 0rem 4rem 0rem;
+  background-image: linear-gradient(to right, #00ffff, #09cd2a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+img {
+  margin: 2rem 0rem;
+  transition: 0.5s;
+  cursor: pointer;
+  border-radius: 3rem;
+}
+
+img:hover {
+  margin: 2rem 0rem;
+  transform: scale(1.1);
+  border-radius: 1rem;
+  filter: drop-shadow(0 0 15px #00ffd9cc);
+}
+
+.snowflake {
+  position: fixed;
+  top: -50px;
+  font-size: 24px;
+  color: white;
+  opacity: 1;
+  pointer-events: none; /* Ensures snowflakes don't interfere with clicking */
+  animation: fall linear infinite, fadeOut ease-in;
+  z-index: 9999; /* Makes sure snowflakes appear on top */
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes fadeOut {
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
